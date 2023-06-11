@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Segmentation App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Customer Segmentation App</h1>
+    <div class="container">
+        <form action="/" method="POST">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="job">Job:</label>
+            <select id="job" name="job" required>
+                <option value="management">Management</option>
+                <option value="technician">Technician</option>
+                <option value="entrepreneur">Entrepreneur</option>
+                <option value="blue-collar">Blue-collar</option>
+                <option value="retired">Retired</option>
+                <option value="admin.">Admin</option>
+                <option value="services">Services</option>
+                <option value="self-employed">Self-employed</option>
+                <option value="unemployed">Unemployed</option>
+                <option value="student">Student</option>
+                <option value="unknown">Unknown</option>
+            </select>
+
+            <label for="marital">Marital:</label>
+            <select id="marital" name="marital" required>
+                <option value="married">Married</option>
+                <option value="divorced">Divorced</option>
+                <option value="single">Single</option>
+            </select>
+
+            <label for="education">Education:</label>
+            <select id="education" name="education" required>
+                <option value="primary">Primary</option>
+                <option value="secondary">Secondary</option>
+                <option value="tertiary">Tertiary</option>
+                <option value="unknown">Unknown</option>
+            </select>
+
+            <label for="balance">Balance:</label>
+            <input type="number" id="balance" name="balance" required>
+
+            <label for="housing">Housing Loan:</label>
+            <select id="housing" name="housing" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="loan">Personal Loan:</label>
+            <select id="loan" name="loan" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+        
+        {% if segment %}
+        <div class="result">
+            Customer Segment: {{ segment }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
