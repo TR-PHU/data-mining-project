@@ -96,6 +96,12 @@
                 <option value="unknown">Unknown</option>
             </select>
 
+            <label for="default">Default:</label>
+            <select id="default" name="default" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
             <label for="balance">Balance:</label>
             <input type="number" id="balance" name="balance" required>
 
@@ -107,6 +113,38 @@
 
             <label for="loan">Personal Loan:</label>
             <select id="loan" name="loan" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="day">Last Contact Day:</label>
+            <input type="number" id="day" name="day" required>
+
+            <label for="month">Last Contact Month:</label>
+            <input type="text" id="month" name="month" required>
+
+            <label for="duration">Last Contact Duration:</label>
+            <input type="number" id="duration" name="duration" required>
+
+            <label for="campaign">Number of Contacts:</label>
+            <input type="number" id="campaign" name="campaign" required>
+
+            <label for="pdays">Days Passed:</label>
+            <input type="number" id="pdays" name="pdays" required>
+
+            <label for="previous">Number of Contacts Performed:</label>
+            <input type="number" id="previous" name="previous" required>
+
+            <label for="poutcome">Previous Outcome:</label>
+            <select id="poutcome" name="poutcome" required>
+                <option value="failure">Failure</option>
+                <option value="success">Success</option>
+                <option value="other">Other</option>
+                <option value="unknown">Unknown</option>
+            </select>
+
+            <label for="deposit">Deposit:</label>
+            <select id="deposit" name="deposit" required>
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
             </select>
